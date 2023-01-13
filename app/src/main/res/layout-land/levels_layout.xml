@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="73dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:text="start"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/start"
+            android:background="@drawable/buttom_shape"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:text="Difficulty\nLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:id="@+id/textView"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:gravity="center"/>
+
+    <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="35dp"
+            android:orientation="vertical"
+            android:padding="5dp">
+        
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EASY"
+                android:textStyle="bold"
+                android:buttonTint="@color/yellow"
+                android:textColor="@color/yellow"
+                android:layout_marginRight="10dp"
+                />
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MEDIUM"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                android:buttonTint="@color/orange"
+                android:textColor="@color/orange"
+                />
+        <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HARD"
+                android:textStyle="bold"
+                android:buttonTint="@color/purple"
+                android:textColor="@color/purple"
+                />
+    </RadioGroup>
+    <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            fresco:placeholderImage="@drawable/loading"
+            fresco:actualImageScaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            />
+</androidx.constraintlayout.widget.ConstraintLayout>
