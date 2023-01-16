@@ -54,7 +54,7 @@
                         android:textSize="18sp"
                         android:hint="@string/email"
                         android:drawableStart="@drawable/person"
-                        android:drawablePadding="15dp"
+                        android:drawablePadding="5dp"
                         android:inputType="textEmailAddress"
                         android:textColor="@color/black"
                         />
@@ -69,28 +69,37 @@
                         android:onClick="clearEmailField"/>
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
+            <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:passwordToggleEnabled="true"
-                    app:helperTextEnabled="false"
-                    android:background="@color/white"
-                    app:startIconDrawable="@drawable/password"
-                    app:startIconTint="@color/black"
-                    app:passwordToggleTint="@color/lavender"
-                    >
-
-                <androidx.appcompat.widget.AppCompatEditText
+                    android:background="@drawable/edittextbackground"
+                    android:padding="15dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:elevation="3dp">
+                <EditText
                         android:id="@+id/loginPassword"
-                        android:padding="15dp"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="10"
                         android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:textSize="18sp"
                         android:hint="@string/pass"
-                        android:background="@drawable/edittextbackground"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/password"
                         android:inputType="textPassword"
-                        android:maxLines="1" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                        android:textColor="@color/black"
+                        />
+                <ImageView
+                        android:id="@+id/clearPassword"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:src="@drawable/clear"
+                        android:visibility="gone"
+                        android:onClick="clearPasswordField"/>
+            </LinearLayout>
 
             <TextView
                     android:layout_width="wrap_content"

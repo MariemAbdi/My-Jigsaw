@@ -1,6 +1,7 @@
 package com.example.myjigsaw.layout.puzzle
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.view.animation.Animation
 import android.view.animation.Transformation
 import android.widget.ImageView
 import android.widget.RelativeLayout
+import com.example.myjigsaw.LoginActivity
 import com.example.myjigsaw.MyApplication.Companion.number
 import com.example.myjigsaw.R
 import com.example.myjigsaw.layout.AbstractLayoutService

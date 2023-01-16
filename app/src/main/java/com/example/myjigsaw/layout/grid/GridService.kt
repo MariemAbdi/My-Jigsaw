@@ -1,20 +1,13 @@
 package com.example.myjigsaw.layout.grid
 
 import android.content.Context
-import android.content.Intent
-import android.view.Menu
-import android.view.MenuItem
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import android.view.Surface
 import android.view.WindowManager
-import androidx.appcompat.app.AlertDialog
-import com.example.myjigsaw.LoginActivity
 import com.example.myjigsaw.R
-import com.example.myjigsaw.ScoreActivity
 import com.example.myjigsaw.layout.AbstractLayoutService
 import com.example.myjigsaw.layout.Layout
-import com.google.firebase.auth.FirebaseAuth
 
 
 class GridService : AbstractLayoutService(Layout.GRID) {

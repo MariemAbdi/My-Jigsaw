@@ -38,6 +38,7 @@ class LoginActivity : AppCompatActivity() {
         email = findViewById(R.id.loginEmail)
         clearEmail = findViewById(R.id.clearEmail)
         pass = findViewById(R.id.loginPassword)
+        clearPass = findViewById(R.id.clearPassword)
         auth= FirebaseAuth.getInstance()
 
         email.addTextChangedListener(object: TextWatcher {
@@ -50,6 +51,24 @@ class LoginActivity : AppCompatActivity() {
                     clearEmail.visibility= View.VISIBLE
                 }else{
                     clearEmail.visibility=View.GONE
+                }
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+        })
+
+        pass.addTextChangedListener(object: TextWatcher {
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                if (pass.text.toString().isNotEmpty()){
+                    clearPass.visibility= View.VISIBLE
+                }else{
+                    clearPass.visibility=View.GONE
                 }
             }
 
@@ -91,6 +110,7 @@ class LoginActivity : AppCompatActivity() {
                 if(task.isSuccessful) {
                     //Clear Fields
                     clearEmailField(view)
+                    clearPasswordField(view)
                     //Create An Alert Builder To Show Message & Show It
                     val builder = AlertDialog.Builder(this, R.style.MyDialogTheme)
                     builder.setCancelable(false)
@@ -137,7 +157,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun clearEmailField(view: View) {
-        email.text.clear()
+        email.text!!.clear()
+    }
+
+    fun clearPasswordField(view: View) {
+        pass.text!!.clear()
     }
 
     fun ResetPassword(view: View) {
