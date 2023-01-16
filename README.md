@@ -1,6 +1,6 @@
 #My-Jigsaw
 Jigsaw Puzzle Game (Kotlin)
-Email-Password Authenticatuon (Firebase)
+Email-Password Authentication (Firebase)
 # DEMO
 | Video 1  | Video 2 | Video 3 | Vido 4 |
 | ------------- | ------------- | ------------- | ------------- |
