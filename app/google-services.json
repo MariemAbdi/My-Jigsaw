@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "118265483910",
-    "project_id": "jigsaw-c837a",
-    "storage_bucket": "jigsaw-c837a.appspot.com"
+    "project_number": "1045897630077",
+    "project_id": "puzzlegame-5b8a9",
+    "storage_bucket": "puzzlegame-5b8a9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:118265483910:android:13e19ef106ea98ec86b707",
+        "mobilesdk_app_id": "1:1045897630077:android:9ce9bd66bc57b5b7597c14",
         "android_client_info": {
           "package_name": "com.example.myjigsaw"
         }
       },
       "oauth_client": [
         {
-          "client_id": "118265483910-n5rv2rg9ibcngcsa0or3516fj2nki7ag.apps.googleusercontent.com",
+          "client_id": "1045897630077-mipfqn4glc3h7fktgp0ucjvv9qu29ggp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCYm-47uafuzY5TBqItZiFwbVwkIq2fjmw"
+          "current_key": "AIzaSyB_EmI37DuAABLhJc18U3I38qq2pX6FYDI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "118265483910-n5rv2rg9ibcngcsa0or3516fj2nki7ag.apps.googleusercontent.com",
+              "client_id": "1045897630077-mipfqn4glc3h7fktgp0ucjvv9qu29ggp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

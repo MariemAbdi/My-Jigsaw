@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu, menu);
+        menuInflater.inflate(R.menu.menu, menu);
         return true;
     }
 
@@ -62,15 +62,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 builder.show()
-
                 return true
             }
-            R.id.scores ->{
-            //Open The Scores Page
-                val intent = Intent(this, ScoreActivity::class.java)
-                startActivity(intent)
-            return true
-        }
             else -> return super.onOptionsItemSelected(item)
         }
     }
