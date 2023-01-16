@@ -12,7 +12,7 @@ class LayoutServiceFacade {
     private val puzzleService: AbstractLayoutService = PuzzleService()
     private val levelsService: AbstractLayoutService = LevelService()
 
-    var currentLayout: Layout = GRID //If No Layout Is Selected We Go To The Home Page
+    var currentLayout: Layout = GRID //Serves The Initial Layout
 
     //The Current Layout Changes Depending On The Selected Layout
     val current: AbstractLayoutService

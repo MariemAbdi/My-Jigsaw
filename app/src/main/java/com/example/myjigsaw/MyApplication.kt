@@ -1,6 +1,7 @@
 package com.example.myjigsaw
 
 import android.app.Application
+import com.example.myjigsaw.layout.Layout
 import com.facebook.drawee.backends.pipeline.Fresco
 
 class MyApplication : Application() {

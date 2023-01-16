@@ -1,23 +1,16 @@
 package com.example.myjigsaw
 
-import android.Manifest
-import android.content.ActivityNotFoundException
+import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
-import android.os.CountDownTimer
-import android.os.Environment
-import android.provider.MediaStore
-import android.widget.Chronometer
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myjigsaw.layout.Layout
 import com.example.myjigsaw.layout.LayoutServiceFacade
-import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import java.io.File
+import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,14 +24,59 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
 
-        //Get The First Fragment => The Home Page
+        //Get The First Fragment => The Home Page / Login Page
         updateView(layoutServiceFacade.currentLayout, layoutServiceFacade.position)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
 
-    //On Back Pressed We Call The Function Of The Current Layout Displayed
-    override fun onBackPressed() = layoutServiceFacade.current.onBackPressed()
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId){
+            R.id.logout ->{
+                //Create An Alert Builder To Show Message & Show It
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("LOGOUT")
+                builder.setMessage("Are You Sure You Want To Log Out ?")
+                builder.setCancelable(false)
 
+                builder.setPositiveButton("YES") { dialog, which ->
+                    FirebaseAuth.getInstance().signOut();//SignOut From Firebase Auth Service
+
+                    //Set loggedIn To False
+                    val sharedPreference =  getSharedPreferences("mySharedPreferences", Context.MODE_PRIVATE)
+                    var editor = sharedPreference.edit()
+                    editor.putBoolean("loggedIn", false)
+                    editor.commit()
+
+                    //Go To The Login Page
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                }
+
+                builder.setNegativeButton("NO") { dialog, which ->
+                    dialog.dismiss()
+                }
+
+                builder.show()
+
+                return true
+            }
+            R.id.scores ->{
+            //Open The Scores Page
+                val intent = Intent(this, ScoreActivity::class.java)
+                startActivity(intent)
+            return true
+        }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
+    //On Back Pressed We Leave The App
+    override fun onBackPressed() = this.finishAffinity()
 
     //Used To Update The Current View's Layout Name & Position
     fun updateView(layout: Layout, position: Int) {

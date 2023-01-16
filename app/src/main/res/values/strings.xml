@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">My Jigsaw</string>
-    <string name="home">Home</string>
-    <string name="next"><![CDATA[->]]></string>
-    <string name="previous"><![CDATA[<-]]></string>
-    <string name="singleimage">SingleImage</string>
-    <string name="textview">TextView</string>
-    <string name="_11">11</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="registerBTN">REGISTER</string>
+    <string name="registerNOW"> Register</string>
+    <string name="loginBTN">LOGIN</string>
+    <string name="loginNOW"> Login</string>
+    <string name="logout">LOGOUT</string>
+    <string name="hasAccount">Do you have an account?</string>
+    <string name="newUser">Do you have not an account?</string>
+    <string name="accountCreated">Account Created Successfully !</string>
+    <string name="loggedIn">Welcome Back !</string>
+    <string name="forgotPassword">Forgot Password?</string>
+    <string name="resetPassword">Reset Password</string>
+    <string name="resetBTN">RESET</string>
+    <string name="score">Scoreboard</string>
 </resources>
